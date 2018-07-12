@@ -44,7 +44,7 @@ let money = 100;
 // Create a variable "item" and set it equal to the user's second command
 // line argument
 
-let item = process.argv[1]; 
+let item = process.argv[3]; 
 console.log(item);
 
 // If "item" = "jacket", subtract 40 from "money" and add 20 to "health" and console.log("You bought a jacket");
@@ -52,11 +52,29 @@ console.log(item);
 // else if "item" is "paint", subtract 30 from "money" and console.log("You bought paint");
 // else if "item" is "hammer", subtract 70 from "money" and console.log("You bought a hammer");
 // else console.log "You bought nothing"
-if (item = jakcet){
-    money - 40
+if (item === "jacket"){
+    money = money - 40;
+    console.log("You bought a jacket"); 
+} 
+else if (item ==="candy"){
+    money = money - 10; 
+    console.log("You bought candy");
+}
+else if (item === "paint"){
+    money = money - 30;
+    console.log("You bought paint"); 
+}
+else if (item === "hammer"){
+    money = money - 70;
+    console.log("You bough a hammer");
+}
+else {
+    console.log("You bought nothing");
 }
 
 // console.log(`You have ${money} dollars left.`);
+
+console.log("You have " + money + " dollars left.");
 
 // Test to make sure the script is working as intended.
 
